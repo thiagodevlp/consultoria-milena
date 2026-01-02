@@ -9,191 +9,179 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #ebd8ce; color: #4a5441; overflow-x: hidden; }
         .bg-sage-dark { background-color: #8ca381; }
-        .glass-nav { background: rgba(235, 216, 206, 0.95); backdrop-filter: blur(12px); }
-        
+        .glass-nav { background: rgba(235, 216, 206, 0.98); backdrop-filter: blur(12px); }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .animate-scroll { display: flex; width: 200%; animation: scroll 40s linear infinite; }
-        
-        .method-card { background-color: #dce3d5; color: #4a5441; transition: all 0.4s ease; border: 1px solid rgba(74, 84, 65, 0.1); }
-        
-        /* Ajuste de toque para mobile */
-        a, button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+        .method-card { background-color: #dce3d5; transition: all 0.4s ease; border: 1px solid rgba(74, 84, 65, 0.1); }
     </style>
 </head>
 <body>
 
     <nav class="fixed w-full z-50 glass-nav border-b border-black/5">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 md:h-28 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-28 flex items-center justify-between">
+            <a href="#home" class="flex-shrink-0">
+                <img src="logo2.png" alt="MILENA" class="h-10 md:h-20 w-auto">
+            </a>
             <div class="flex-shrink-0">
-                <a href="#home">
-                    <img src="logo2.png" alt="MILENA" class="h-12 md:h-20 w-auto">
-                </a>
-            </div>
-            <div class="hidden lg:flex space-x-12 text-[9px] font-bold uppercase tracking-[0.5em] opacity-70">
-                <a href="#home" class="hover:opacity-100 transition">Início</a>
-                <a href="#sobre" class="hover:opacity-100 transition">Sobre</a>
-                <a href="#metodologia" class="hover:opacity-100 transition">Método</a>
-                <a href="#planos" class="hover:opacity-100 transition">Planos</a>
-            </div>
-            <div class="flex-shrink-0">
-                <a href="https://wa.me/5515999999999" target="_blank" class="bg-sage-dark text-[#ebd8ce] px-4 md:px-8 py-2 md:py-3 rounded-sm font-black text-[8px] md:text-[9px] uppercase tracking-widest hover:brightness-110 transition shadow-sm">
+                <a href="https://wa.me/5515999999999" target="_blank" class="bg-sage-dark text-[#ebd8ce] px-4 md:px-8 py-2 md:py-3 rounded-sm font-black text-[9px] uppercase tracking-widest shadow-sm">
                     Mudar Agora
                 </a>
             </div>
         </div>
     </nav>
 
-    <div class="h-20 md:h-28"></div>
+    <div class="h-16 md:h-28"></div>
 
-    <section id="home" class="min-h-[80vh] flex items-center px-4 md:px-6 py-12 md:py-0">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-            <div class="z-10 text-center md:text-left order-2 md:order-1">
-                <h2 class="text-[#8ca381] uppercase tracking-[0.4em] md:tracking-[0.6em] text-[8px] md:text-[10px] font-bold mb-4 md:mb-6 italic">Equilíbrio & Força</h2>
-                <h1 class="text-5xl md:text-8xl font-black leading-none uppercase mb-6 md:mb-8 text-[#4a5441] tracking-tighter">
-                    SAIA DA <br><span class="opacity-30 font-light not-italic italic text-4xl md:text-7xl">INÉRCIA</span>
+    <section id="home" class="min-h-[80vh] flex items-center px-4 md:px-6 py-8 md:py-0">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            
+            <div class="flex justify-center order-1 md:order-2">
+                <div class="w-full max-w-sm md:max-w-md rounded-sm overflow-hidden border-2 md:border-4 border-white shadow-xl">
+                    <img src="img2.jpeg" alt="Treino" class="w-full h-auto object-contain block">
+                </div>
+            </div>
+
+            <div class="text-center md:text-left order-2 md:order-1">
+                <h2 class="text-[#8ca381] uppercase tracking-[0.4em] text-[9px] md:text-[10px] font-bold mb-4 italic">Equilíbrio & Força</h2>
+                <h1 class="text-4xl md:text-8xl font-black leading-tight uppercase mb-6 text-[#4a5441] tracking-tighter">
+                    SAIA DA <br><span class="opacity-30 font-light not-italic italic text-3xl md:text-7xl">INÉRCIA</span>
                 </h1>
-                <p class="text-[#4a5441]/70 text-sm md:text-base max-w-sm mx-auto md:mx-0 mb-8 md:mb-12 font-light leading-relaxed">
-                    Treinamento inteligente desenhado para quem busca vencer o sedentarismo com elegância.
+                <p class="text-[#4a5441]/70 text-sm md:text-base max-w-md mx-auto md:mx-0 mb-8 font-light leading-relaxed">
+                    Treinamento inteligente desenhado para quem busca vencer o sedentarismo com elegância e resultados reais.
                 </p>
-                <a href="#planos" class="w-full md:w-auto border border-[#8ca381] text-[#8ca381] px-12 py-4 font-black uppercase text-[10px] tracking-widest hover:bg-[#8ca381] hover:text-[#ebd8ce] transition">
+                <a href="#planos" class="inline-block border border-[#8ca381] text-[#8ca381] px-10 py-4 font-black uppercase text-[10px] tracking-widest hover:bg-[#8ca381] hover:text-[#ebd8ce] transition">
                     Ver Protocolos
                 </a>
-            </div>
-            <div class="relative flex justify-center order-1 md:order-2">
-                <div class="w-full max-w-[280px] md:max-w-md aspect-square bg-[#8ca381]/20 rounded-sm overflow-hidden border-4 border-white shadow-xl">
-                    <img src="img2.jpeg" alt="Treino" class="w-full h-full object-cover">
-                </div>
             </div>
         </div>
     </section>
 
-    <div class="bg-sage-dark py-10 md:py-16 border-y border-white/10">
-        <div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-[#ebd8ce] px-6">
+    <div class="bg-sage-dark py-12 border-y border-white/10">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-4 text-[#ebd8ce] px-6">
             <div class="text-center">
-                <span class="block text-3xl md:text-4xl font-black mb-1 md:mb-2">+500</span>
-                <span class="text-[7px] md:text-[8px] uppercase tracking-widest opacity-60 font-bold">Vidas Ativas</span>
+                <span class="block text-3xl md:text-4xl font-black">+500</span>
+                <span class="text-[7px] md:text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Vidas Ativas</span>
             </div>
             <div class="text-center">
-                <span class="block text-3xl md:text-4xl font-black mb-1 md:mb-2">100%</span>
-                <span class="text-[7px] md:text-[8px] uppercase tracking-widest opacity-60 font-bold">Estratégico</span>
+                <span class="block text-3xl md:text-4xl font-black">100%</span>
+                <span class="text-[7px] md:text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Estratégico</span>
             </div>
             <div class="text-center">
-                <span class="block text-3xl md:text-4xl font-black mb-1 md:mb-2">MF-3</span>
-                <span class="text-[7px] md:text-[8px] uppercase tracking-widest opacity-60 font-bold">Metodologia</span>
+                <span class="block text-3xl md:text-4xl font-black">MF-3</span>
+                <span class="text-[7px] md:text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Método</span>
             </div>
             <div class="text-center">
-                <span class="block text-3xl md:text-4xl font-black mb-1 md:mb-2">VIP</span>
-                <span class="text-[7px] md:text-[8px] uppercase tracking-widest opacity-60 font-bold">Suporte</span>
+                <span class="block text-3xl md:text-4xl font-black">VIP</span>
+                <span class="text-[7px] md:text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Suporte</span>
             </div>
         </div>
     </div>
 
     <section id="sobre" class="py-20 md:py-32 px-4 md:px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-24 items-center">
-            <div class="relative px-4 md:px-0">
-                <div class="bg-white/40 p-2 rounded-xl shadow-xl">
-                    <img src="mi.jpeg" alt="Milena Ferreira" class="rounded-lg w-full">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="flex justify-center">
+                <div class="bg-white/40 p-2 rounded-lg shadow-xl max-w-sm md:max-w-full">
+                    <img src="mi.jpeg" alt="Milena Ferreira" class="rounded-md w-full h-auto">
                 </div>
             </div>
             <div class="text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-black uppercase mb-6 md:mb-8 text-[#4a5441] italic leading-tight">Expert <br><span class="opacity-30 font-light not-italic text-3xl md:text-4xl">Milena Ferreira</span></h2>
+                <h2 class="text-4xl md:text-5xl font-black uppercase mb-6 text-[#4a5441] italic leading-tight">Expert <br><span class="opacity-30 font-light not-italic text-3xl md:text-4xl">Milena Ferreira</span></h2>
                 <p class="text-[#4a5441]/70 leading-relaxed mb-8 text-sm md:text-[15px] font-light italic">
                     Minha missão é levar o treinamento de elite para o seu dia a dia, eliminando o sedentarismo com inteligência biomecânica.
                 </p>
                 <div class="h-0.5 w-16 bg-[#8ca381] mb-8 mx-auto md:mx-0 opacity-40"></div>
-                <p class="text-[#8ca381] font-bold text-base md:text-lg uppercase tracking-tighter italic">"Qualidade vence o volume em qualquer cenário."</p>
+                <p class="text-[#8ca381] font-bold text-base md:text-lg uppercase tracking-tighter italic px-4 md:px-0">"Qualidade vence o volume em qualquer cenário."</p>
             </div>
         </div>
     </section>
 
-    <div class="py-8 md:py-12 bg-sage-dark overflow-hidden select-none border-y border-white/10">
+    <div class="py-8 bg-sage-dark overflow-hidden select-none border-y border-white/10">
         <div class="animate-scroll text-[#ebd8ce]">
-            <span class="text-lg md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-[0.3em]">Inteligência Aplicada •</span>
-            <span class="text-lg md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-[0.3em]">Fim do Sedentarismo •</span>
-            <span class="text-lg md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-[0.3em]">Resultados Reais •</span>
-            <span class="text-lg md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-[0.3em]">Estilo de Vida •</span>
-            <span class="text-lg md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-[0.3em]">Inteligência Aplicada •</span>
-            <span class="text-lg md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-[0.3em]">Fim do Sedentarismo •</span>
+            <span class="text-base md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-widest whitespace-nowrap">Inteligência Aplicada •</span>
+            <span class="text-base md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-widest whitespace-nowrap">Fim do Sedentarismo •</span>
+            <span class="text-base md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-widest whitespace-nowrap">Resultados Reais •</span>
+            <span class="text-base md:text-xl font-black uppercase italic mx-6 md:mx-12 tracking-widest whitespace-nowrap">Inteligência Aplicada •</span>
         </div>
     </div>
 
-    <section id="metodologia" class="py-20 md:py-32 px-4 md:px-6">
+    <section id="metodologia" class="py-20 px-4 md:px-6">
         <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-2xl md:text-3xl font-black italic uppercase mb-12 md:mb-20 text-[#4a5441]">Método <span class="opacity-30 font-light not-italic">MF-3</span></h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <div class="p-8 md:p-10 method-card rounded-sm shadow-sm">
-                    <span class="text-3xl md:text-4xl font-black opacity-10">01</span>
-                    <h4 class="text-base md:text-lg font-bold mt-4 md:mt-6 mb-3 md:mb-4 uppercase italic">Avaliação</h4>
+            <h3 class="text-2xl md:text-3xl font-black italic uppercase mb-12 text-[#4a5441]">Método <span class="opacity-30 font-light not-italic">MF-3</span></h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-8 method-card rounded-sm shadow-sm">
+                    <span class="text-3xl font-black opacity-10">01</span>
+                    <h4 class="text-lg font-bold mt-4 mb-3 uppercase italic">Avaliação</h4>
                     <p class="text-xs md:text-sm leading-relaxed font-light opacity-80">Mapeamento biomecânico para entender o seu ponto de partida real.</p>
                 </div>
-                <div class="p-8 md:p-10 method-card rounded-sm shadow-sm">
-                    <span class="text-3xl md:text-4xl font-black opacity-10">02</span>
-                    <h4 class="text-base md:text-lg font-bold mt-4 md:mt-6 mb-3 md:mb-4 uppercase italic">Prescrição</h4>
+                <div class="p-8 method-card rounded-sm shadow-sm">
+                    <span class="text-3xl font-black opacity-10">02</span>
+                    <h4 class="text-lg font-bold mt-4 mb-3 uppercase italic">Prescrição</h4>
                     <p class="text-xs md:text-sm leading-relaxed font-light opacity-80">Treinos curtos e intensos focados na máxima densidade de carga.</p>
                 </div>
-                <div class="p-8 md:p-10 method-card rounded-sm shadow-sm">
-                    <span class="text-3xl md:text-4xl font-black opacity-10">03</span>
-                    <h4 class="text-lg font-bold mt-4 md:mt-6 mb-3 md:mb-4 uppercase italic">Mentoria</h4>
+                <div class="p-8 method-card rounded-sm shadow-sm">
+                    <span class="text-3xl font-black opacity-10">03</span>
+                    <h4 class="text-lg font-bold mt-4 mb-3 uppercase italic">Mentoria</h4>
                     <p class="text-xs md:text-sm leading-relaxed font-light opacity-80">Suporte via WhatsApp para garantir que a constância seja inegociável.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="planos" class="py-20 md:py-32 px-4 md:px-6">
+    <section id="planos" class="py-20 px-4 md:px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-black uppercase italic mb-12 md:mb-20 text-center text-[#4a5441]">Protocolos de <span class="opacity-30 font-light not-italic text-2xl md:text-3xl">Evolução</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-8 items-end">
-                <div class="p-8 md:p-10 bg-[#dce3d5] border border-black/5 rounded-sm shadow-md text-center order-2 md:order-1">
+            <h2 class="text-3xl font-black uppercase italic mb-12 text-center text-[#4a5441]">Protocolos de <span class="opacity-30 font-light not-italic">Evolução</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-8 items-end">
+                
+                <div class="p-8 bg-[#dce3d5] border border-black/5 rounded-sm shadow-md text-center">
                     <h4 class="text-[#8ca381] uppercase font-bold text-[8px] mb-6 tracking-widest">Start Mensal</h4>
-                    <div class="text-4xl md:text-5xl font-black mb-8 text-[#4a5441]">R$ 150</div>
-                    <ul class="text-[#4a5441]/70 space-y-3 mb-10 text-[10px] md:text-[11px] uppercase tracking-widest text-left border-t border-black/5 pt-6">
+                    <div class="text-4xl font-black mb-8 text-[#4a5441]">R$ 150</div>
+                    <ul class="text-[#4a5441]/70 space-y-3 mb-10 text-[10px] uppercase tracking-widest text-left border-t border-black/5 pt-6">
                         <li>● Planilha Individual</li>
                         <li>● Suporte via WhatsApp</li>
                     </ul>
-                    <a href="https://wa.me/5515999999999" class="w-full border-2 border-[#8ca381] text-[#8ca381] py-4 text-[9px] font-bold uppercase transition">Selecionar</a>
+                    <a href="https://wa.me/5515999999999" class="w-full border-2 border-[#8ca381] text-[#8ca381] py-4 text-[9px] font-bold uppercase">Selecionar</a>
                 </div>
                 
-                <div class="p-10 md:p-12 bg-sage-dark text-[#ebd8ce] transform md:scale-105 shadow-2xl z-10 rounded-sm text-center order-1 md:order-2">
+                <div class="p-10 bg-sage-dark text-[#ebd8ce] transform md:scale-105 shadow-2xl z-10 rounded-sm text-center">
                     <h4 class="uppercase font-black text-[8px] mb-6 tracking-widest opacity-40 italic">Recomendado</h4>
-                    <div class="text-6xl md:text-7xl font-black mb-8 leading-none italic">R$ 390</div>
-                    <ul class="space-y-3 mb-10 text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-left border-t border-white/10 pt-8">
+                    <div class="text-6xl font-black mb-8 leading-none italic">R$ 390</div>
+                    <ul class="space-y-3 mb-10 text-[10px] font-bold uppercase tracking-widest text-left border-t border-white/10 pt-8">
                         <li>● Correção por Vídeo</li>
                         <li>● Plano de Hábitos</li>
                         <li>● Suporte Prioritário</li>
                     </ul>
-                    <a href="https://wa.me/5515999999999" class="w-full bg-[#ebd8ce] text-olive-dark py-5 text-[9px] font-black uppercase transition">Assinar Agora</a>
+                    <a href="https://wa.me/5515999999999" class="w-full bg-[#ebd8ce] text-olive-dark py-5 text-[9px] font-black uppercase">Assinar Agora</a>
                 </div>
 
-                <div class="p-8 md:p-10 bg-[#dce3d5] border border-black/5 rounded-sm shadow-md text-center order-3">
+                <div class="p-8 bg-[#dce3d5] border border-black/5 rounded-sm shadow-md text-center">
                     <h4 class="text-[#8ca381] uppercase font-bold text-[8px] mb-6 tracking-widest">Elite Semestral</h4>
-                    <div class="text-4xl md:text-5xl font-black mb-8 text-[#4a5441]">R$ 650</div>
-                    <ul class="text-[#4a5441]/70 space-y-3 mb-10 text-[10px] md:text-[11px] uppercase tracking-widest text-left border-t border-black/5 pt-6">
+                    <div class="text-4xl font-black mb-8 text-[#4a5441]">R$ 650</div>
+                    <ul class="text-[#4a5441]/70 space-y-3 mb-10 text-[10px] uppercase tracking-widest text-left border-t border-black/5 pt-6">
                         <li>● Ciclo de 6 Meses</li>
                         <li>● Análise de Evolução</li>
                     </ul>
-                    <a href="https://wa.me/5515999999999" class="w-full border-2 border-[#8ca381] text-[#8ca381] py-4 text-[9px] font-bold uppercase transition">Selecionar</a>
+                    <a href="https://wa.me/5515999999999" class="w-full border-2 border-[#8ca381] text-[#8ca381] py-4 text-[9px] font-bold uppercase">Selecionar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contato" class="py-16 md:py-24 text-center border-t border-black/5 bg-[#ebd8ce] px-4">
-        <div class="flex justify-center items-center gap-8 md:gap-12 mb-10">
-            <a href="https://wa.me/5515999999999" target="_blank" class="flex flex-col items-center group">
-                <div class="w-10 h-10 md:w-12 md:h-12 border-2 border-[#8ca381] rounded-full flex items-center justify-center mb-3 text-[#8ca381] group-hover:bg-[#8ca381] group-hover:text-[#ebd8ce] transition">
+    <footer id="contato" class="py-16 text-center border-t border-black/5 bg-[#ebd8ce] px-4">
+        <div class="flex justify-center items-center gap-12 mb-10">
+            <a href="https://wa.me/5515999999999" target="_blank" class="flex flex-col items-center">
+                <div class="w-10 h-10 border-2 border-[#8ca381] rounded-full flex items-center justify-center mb-2 text-[#8ca381]">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72 1.041 3.712 1.587 5.714 1.587h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 </div>
                 <span class="text-[7px] font-bold uppercase tracking-widest text-[#8ca381]">WhatsApp</span>
             </a>
-            <a href="https://instagram.com/SEUUSER" target="_blank" class="flex flex-col items-center group">
-                <div class="w-10 h-10 md:w-12 md:h-12 border-2 border-[#8ca381] rounded-full flex items-center justify-center mb-3 text-[#8ca381] group-hover:bg-[#8ca381] group-hover:text-[#ebd8ce] transition">
+            <a href="https://instagram.com/SEUUSER" target="_blank" class="flex flex-col items-center">
+                <div class="w-10 h-10 border-2 border-[#8ca381] rounded-full flex items-center justify-center mb-2 text-[#8ca381]">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path></svg>
                 </div>
                 <span class="text-[7px] font-bold uppercase tracking-widest text-[#8ca381]">Instagram</span>
             </a>
         </div>
-        <p class="text-[#4a5441] text-[7px] md:text-[8px] uppercase tracking-[0.6em] md:tracking-[0.8em] opacity-30 px-6">© 2026 Milena Ferreira Performance</p>
+        <p class="text-[#4a5441] text-[7px] md:text-[8px] uppercase tracking-[0.6em] opacity-30">© 2026 Milena Ferreira Performance</p>
     </footer>
 
 </body>
