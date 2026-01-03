@@ -34,6 +34,15 @@
             display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 10px;
         }
         .print-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+        /* Botão Voltar ao Topo */
+        #backToTop {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop:hover { background-color: #4a5441; transform: scale(1.1); }
     </style>
 </head>
 <body>
@@ -41,7 +50,14 @@
     <nav class="fixed w-full z-50 glass-nav border-b border-black/5">
         <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-28 flex items-center justify-between">
             <a href="#home"><img src="logo2.png" alt="MILENA" class="h-10 md:h-20 w-auto"></a>
-            <a href="https://wa.me/5515988053910" target="_blank" class="bg-sage-dark text-[#ebd8ce] px-4 md:px-8 py-2 md:py-3 rounded-sm font-black text-[9px] uppercase tracking-widest">Mudar Agora</a>
+            
+            <div class="hidden md:flex gap-8 text-[10px] uppercase font-bold tracking-widest text-[#4a5441]">
+                <a href="#sobre" class="hover:text-[#8ca381] transition">Sobre</a>
+                <a href="#metodologia" class="hover:text-[#8ca381] transition">Método</a>
+                <a href="#planos" class="hover:text-[#8ca381] transition">Planos</a>
+            </div>
+
+            <a href="https://wa.me/5515988053910" target="_blank" class="bg-sage-dark text-[#ebd8ce] px-4 md:px-8 py-2 md:py-3 rounded-sm font-black text-[9px] uppercase tracking-widest shadow-sm">Mudar Agora</a>
         </div>
     </nav>
 
@@ -65,10 +81,10 @@
 
     <div class="bg-sage-dark py-12 border-y border-white/10">
         <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 text-[#ebd8ce] px-6">
-            <div class="text-center"><span class="block text-3xl md:text-4xl font-black mb-2">+500</span><span class="text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Vidas Ativas</span></div>
-            <div class="text-center"><span class="block text-3xl md:text-4xl font-black">100%</span><span class="text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Estratégico</span></div>
-            <div class="text-center"><span class="block text-3xl md:text-4xl font-black">MF-3</span><span class="text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Método</span></div>
-            <div class="text-center"><span class="block text-3xl md:text-4xl font-black">VIP</span><span class="text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Suporte</span></div>
+            <div class="text-center"><span class="block text-3xl md:text-4xl font-black mb-2">+50</span><span class="text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Pessoas treinando com constância</span></div>
+            <div class="text-center"><span class="block text-3xl md:text-4xl font-black">100%</span><span class="text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Treinos personalizados</span></div>
+            <div class="text-center"><span class="block text-3xl md:text-4xl font-black">Método</span><span class="text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Baseado em ciência</span></div>
+            <div class="text-center"><span class="block text-3xl md:text-4xl font-black">Suporte</span><span class="text-[8px] uppercase tracking-widest opacity-60 font-bold uppercase">Direto e estratégico</span></div>
         </div>
     </div>
 
@@ -76,8 +92,8 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="flex justify-center"><img src="mi.jpeg" alt="Milena" class="rounded-lg shadow-xl max-w-sm w-full"></div>
             <div class="text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-black uppercase mb-6 text-[#4a5441] italic">Expert <br><span class="opacity-30 font-light not-italic text-3xl">Milena Ferreira</span></h2>
-                <p class="text-[#4a5441]/70 leading-relaxed mb-8 text-sm font-light italic">Minha missão é levar o treinamento de elite para o seu dia a dia.</p>
+                <h2 class="text-4xl md:text-5xl font-black uppercase mb-6 text-[#4a5441] italic">Personal Trainer <br><span class="opacity-30 font-light not-italic text-3xl">Milena Ferreira</span></h2>
+                <p class="text-[#4a5441]/70 leading-relaxed mb-8 text-sm font-light italic">Minha missão é ajudar pessoas a saírem do sedentarismo através de um treinamento inteligente, possível e consistente.</p>
                 <p class="text-[#8ca381] font-bold text-lg uppercase tracking-tighter italic">"Qualidade vence o volume em qualquer cenário."</p>
             </div>
         </div>
@@ -90,42 +106,83 @@
         </div>
     </div>
 
-    <section id="metodologia" class="py-20 px-4 md:px-6">
+    <section id="metodologia" class="py-20 px-4 md:px-6 border-b border-black/5">
         <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-2xl font-black italic uppercase mb-12 text-[#4a5441]">Método <span class="opacity-30 font-light not-italic">MF-3</span></h3>
+            <h3 class="text-2xl font-black italic uppercase mb-12 text-[#4a5441]">Método</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-8 card-sage rounded-sm shadow-md text-center"><h4 class="font-bold uppercase mb-3 italic">Avaliação</h4><p class="text-sm opacity-90">Mapeamento biomecânico para entender o seu ponto de partida real.</p></div>
-                <div class="p-8 card-sage rounded-sm shadow-md text-center"><h4 class="font-bold uppercase mb-3 italic">Prescrição</h4><p class="text-sm opacity-90">Treinos curtos e intensos focados na máxima densidade de carga.</p></div>
-                <div class="p-8 card-sage rounded-sm shadow-md text-center"><h4 class="font-bold uppercase mb-3 italic">Mentoria</h4><p class="text-sm opacity-90">Suporte via WhatsApp para garantir que a constância seja inegociável.</p></div>
+                <div class="p-8 card-sage rounded-sm shadow-md text-center"><h4 class="font-bold uppercase mb-3 italic">Avaliação Inicial</h4><p class="text-sm opacity-90">Análise completa para entender sua rotina, histórico, limitações e objetivos reais.</p></div>
+                <div class="p-8 card-sage rounded-sm shadow-md text-center"><h4 class="font-bold uppercase mb-3 italic">Planejamento de Treino</h4><p class="text-sm opacity-90">Treinos objetivos, bem estruturados e adaptados ao seu tempo disponível: foco em eficiência e evolução progressiva.</p></div>
+                <div class="p-8 card-sage rounded-sm shadow-md text-center"><h4 class="font-bold uppercase mb-3 italic">Acompanhamento Contínuo</h4><p class="text-sm opacity-90">Suporte direto via WhatsApp para ajustes, dúvidas e orientação. Constância construída com acompanhamento.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white/30 px-4 md:px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-xl font-black uppercase italic mb-10 text-center text-[#4a5441]">O que você recebe em <span class="text-[#8ca381]">qualquer plano:</span></h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="flex items-start gap-4 p-4 border border-[#8ca381]/20 rounded-sm">
+                    <span class="text-xl">💪🏻</span>
+                    <p><strong>Treinos organizados</strong> por dias e grupos musculares específicos para sua necessidade.</p>
+                </div>
+                <div class="flex items-start gap-4 p-4 border border-[#8ca381]/20 rounded-sm">
+                    <span class="text-xl">📲</span>
+                    <p><strong>Aplicativo exclusivo</strong> com vídeos demonstrativos de cada exercício para execução perfeita.</p>
+                </div>
+                <div class="flex items-start gap-4 p-4 border border-[#8ca381]/20 rounded-sm">
+                    <span class="text-xl">📈</span>
+                    <p><strong>Registro de evolução</strong> para acompanhar cargas e repetições diretamente no app.</p>
+                </div>
+                <div class="flex items-start gap-4 p-4 border border-[#8ca381]/20 rounded-sm">
+                    <span class="text-xl">💬</span>
+                    <p><strong>Suporte direto</strong> via chat para dúvidas rápidas e ajustes imediatos.</p>
+                </div>
+                <div class="flex items-start gap-4 p-4 border border-[#8ca381]/20 rounded-sm md:col-span-2">
+                    <span class="text-xl">🗓️</span>
+                    <p><strong>Feedback semanal</strong> em horário comercial para garantir que você continue no caminho certo.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="planos" class="py-20 px-4 md:px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-black uppercase italic mb-12 text-center text-[#4a5441]">Protocolos de <span class="opacity-30 font-light not-italic">Evolução</span></h2>
+            <h2 class="text-3xl font-black uppercase italic mb-12 text-center text-[#4a5441]">Planos de<span class="opacity-30 font-light not-italic"> Acompanhamento</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
                 <div class="p-8 card-sage rounded-sm shadow-lg text-center">
-                    <h4 class="uppercase font-bold text-[8px] mb-6 tracking-widest opacity-60 text-white">Start Mensal</h4>
-                    <div class="text-4xl font-black mb-8">R$ 150</div>
-                    <ul class="text-[10px] uppercase mb-8 space-y-3 text-left border-t border-white/10 pt-6"><li>● Planilha Individual</li><li>● Suporte WhatsApp</li></ul>
-                    <a href="https://wa.me/5515988053910" class="w-full bg-white text-[#8ca381] py-4 text-[9px] font-bold uppercase block transition">Selecionar</a>
-                </div>
-                <div class="p-8 card-sage border-2 border-white transform md:scale-105 shadow-2xl z-10 text-center">
-                    <h4 class="uppercase font-black text-[8px] mb-6 italic text-white">Recomendado</h4>
-                    <div class="text-4xl md:text-5xl font-black mb-8">R$ 390</div>
-                    <ul class="text-[10px] uppercase mb-8 space-y-3 text-left border-t border-white/10 pt-6"><li>● Correção Vídeo</li><li>● Plano de Hábitos</li><li>● Suporte Prioritário</li></ul>
-                    <a href="https://wa.me/5515988053910" class="w-full bg-white text-[#8ca381] py-4 text-[9px] font-bold uppercase block transition">Selecionar</a>
+                    <h4 class="uppercase font-bold text-[8px] mb-6 tracking-widest opacity-60 text-white">Plano Mensal</h4>
+                    <div class="text-4xl font-black mb-8">R$ 99,99</div>
+                    <ul class="text-[10px] uppercase mb-8 space-y-3 text-left border-t border-white/10 pt-6"><li>● Acompanhamento por 30 dias</li></ul>
+                    <a href="https://wa.me/5515988053910" class="w-full bg-white text-[#8ca381] py-4 text-[9px] font-bold uppercase block transition border border-white hover:bg-transparent hover:text-white">Selecionar plano</a>
                 </div>
                 <div class="p-8 card-sage rounded-sm shadow-lg text-center">
-                    <h4 class="uppercase font-bold text-[8px] mb-6 tracking-widest opacity-60 text-white">Elite Semestral</h4>
-                    <div class="text-4xl font-black mb-8">R$ 650</div>
-                    <ul class="text-[10px] uppercase mb-8 space-y-3 text-left border-t border-white/10 pt-6"><li>● Ciclo 6 Meses</li><li>● Análise Evolução</li></ul>
-                    <a href="https://wa.me/5515988053910" class="w-full bg-white text-[#8ca381] py-4 text-[9px] font-bold uppercase block transition">Selecionar</a>
+                    <h4 class="uppercase font-bold text-[8px] mb-6 tracking-widest opacity-60 text-white">Plano Bimestral</h4>
+                    <div class="text-4xl font-black mb-8">R$ 179,99</div>
+                    <ul class="text-[10px] uppercase mb-8 space-y-3 text-left border-t border-white/10 pt-6"><li>● Acompanhamento por 60 dias</li></ul>
+                    <a href="https://wa.me/5515988053910" class="w-full bg-white text-[#8ca381] py-4 text-[9px] font-bold uppercase block transition border border-white hover:bg-transparent hover:text-white">Selecionar plano</a>
+                </div>
+                
+                <div class="p-8 card-sage border-2 border-white transform md:scale-105 shadow-2xl z-10 rounded-sm text-center relative flex flex-col items-center">
+                    <h4 class="uppercase font-black text-[8px] mb-2 italic text-white">Plano Trimestral</h4>
+                    <div class="mb-4 inline-block bg-[#4a5441] text-[#ebd8ce] text-[7px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-sm">
+                        Mais escolhido
+                    </div>
+                    <div class="text-4xl md:text-5xl font-black mb-8">R$ 239,99</div>
+                    <ul class="text-[10px] uppercase mb-8 space-y-3 text-left border-t border-white/10 pt-6"><li>● Acompanhamento por 90 dias</li></ul>
+                    <a href="https://wa.me/5515988053910" class="w-full bg-white text-[#8ca381] py-4 text-[9px] font-bold uppercase block transition border border-white hover:bg-transparent hover:text-white">Selecionar plano</a>
                 </div>
             </div>
+            <p class="mt-12 text-center text-[#4a5441]/60 text-xs md:text-sm italic font-medium">
+                Todos os planos incluem acompanhamento direto, ajustes contínuos e foco em constância.
+            </p>
         </div>
     </section>
+
+    <a href="#home" id="backToTop" class="fixed bottom-6 left-6 w-10 h-10 bg-sage-dark text-white rounded-full shadow-lg z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </a>
 
     <footer class="py-16 text-center bg-[#ebd8ce] border-t border-black/5 px-4">
         <div class="flex justify-center items-center gap-12 mb-10 text-[#8ca381]">
